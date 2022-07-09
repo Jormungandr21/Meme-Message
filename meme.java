@@ -12,22 +12,34 @@ public class meme{
 		String word= "";
 		String word2="";
 		String meme = sc.nextLine(); 
+		int z=0;
 		for(int m=0;m<meme.length();m++){
-			if(m%2==0){
+			if(meme.charAt(m)==' '){
+				word += meme.substring(m,m+1);
+				continue;
+			}
+			else if(z%2==0){
 				word+=meme.substring(m,m+1).toUpperCase();
-
+				z++;
 			}
 			else{
+				z++;
 				word += meme.substring(m,m+1);
 			}	
 		}
+		z=0;
 		for(int m=0;m<meme.length();m++){
-			if(m%2!=0){
+			if(meme.charAt(m)==' '){
+				word2 += meme.substring(m,m+1);
+				continue;
+			}
+			else if(z%2!=0){
 				word2 += meme.substring(m,m+1).toUpperCase();
-
+				z++;
 			}
 			else{
 				word2 += meme.substring(m,m+1);
+				z++;
 			}	
 		}
 		System.out.println("OPTION 1: "+word);
