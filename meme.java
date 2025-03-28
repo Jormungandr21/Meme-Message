@@ -1,3 +1,4 @@
+
 import java.util.*; 
 public class meme{
 	/**
@@ -11,6 +12,7 @@ public class meme{
 		String word= "";
 		String word2="";
 		String meme = sc.nextLine(); 
+		meme=meme.toLowerCase();
 		int z=0;
 		for(int m=0;m<meme.length();m++){
 			if(meme.charAt(m)==' '){
